@@ -1,0 +1,17 @@
+Computational Foundations Notes
+
+variable = named data
+
+    name = data     
+    name = value 
+
+        integer (int) = whole numbers, no decimal
+        floats (float) = number with decimal
+        string (str) = sequence of numbers/words surrounded by quotes (ex: "dog", "cat", "mouse"- single or double quotes)
+
+syntax (grammer)= the rules that determine the order of symbols to be correctly understood by a language
+
+Built in Functions
+    print()= displays a value in parenthesis
+    type()= returns the type of variable that has been entered
+    input()= displays a prompt and returns the value a user may type in
