@@ -1,0 +1,96 @@
+html {
+align-content: center;
+}
+body {
+  background-image: url('../img/home.jpg');
+  background-repeat: no-repeat,repeat;
+  background-position: center;
+  background-size: cover;
+  color: #333;
+  margin: 0;
+  font: 1.2em / 1.2 'Courier New', Times, Serif;
+}
+
+.image-grid {
+  --gap: 16px;
+  --num-cols: 4;
+  --row-height: 300px;
+
+  box-sizing: border-box;
+  padding: auto;
+
+  display: grid;
+  grid-template-columns: repeat(var(--num-cols), 1fr);
+  grid-auto-rows: var(--row-height);
+  gap: var(--gap);
+}
+
+.image-grid > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 1024px) {
+  .image-grid {
+    --num-cols: 2;
+    --row-height: 200px; 
+  }
+}
+
+#homeimg {
+  width:100%;
+
+}
+
+.logo {
+  font-size: 300%;
+  padding: 50px 20px;
+  margin: 0 auto;
+  max-width: 980px;
+}
+
+.grid {
+  margin: 0 auto;
+  padding: 0 5rem;
+  max-width: 100%;
+  display: grid;
+}
+
+nav {
+background-color: rgb(201, 247, 155);
+  padding: .5em;
+  margin: auto;
+  top: 0; 
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display:flex;
+  text-align: center;
+
+}
+
+nav a {
+  color: #333;
+  text-decoration: none;
+  padding: .5em 1em;
+}
+
+.photos {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  gap: 1px;
+}
+
+.feature {
+  width: 100%;
+}
