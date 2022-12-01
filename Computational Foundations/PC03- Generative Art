@@ -1,0 +1,60 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Thu Sep 16 16:38:51 2021
+
+@author: lyndanwall
+"""
+
+import turtle
+from math import cos,sin
+from time import sleep
+
+window = turtle.Screen()
+window.bgcolor("black")
+
+mySpirograph = turtle.Turtle()
+mySpirograph.hideturtle()
+mySpirograph.speed(0)
+mySpirograph.pensize(2)
+
+myPen = turtle.Turtle()
+myPen.hideturtle()
+myPen.speed(0)
+myPen.pensize(3)
+myPen.color("DarkOrange")
+
+R = 125
+r = 75
+d = 125
+
+angle = 0
+
+myPen.penup()
+myPen.goto(R-r+d,0)
+myPen.pendown()
+
+theta = 0.2
+steps = int(6*3.14/theta)
+
+for t in range(0,steps):
+    x = (R - r) * cos(angle)
+    y = (R - r) * sin(angle)
+    mySpirograph.penup()
+    mySpirograph.goto(x,y-r)
+    mySpirograph.color("DarkSeaGreen1")
+    mySpirograph.pendown()
+    mySpirograph.circle(r)
+    mySpirograph.penup()
+    mySpirograph.goto(x,y)
+    mySpirograph.dot(5)
+    
+    x = (R - r) * cos(angle) + d * cos(((R-r)/r)*angle)
+    y = (R - r) * sin(angle) - d * sin(((R-r)/r)*angle)
+    mySpirograph.pendown()
+    mySpirograph.goto(x,y)
+    mySpirograph.forward(d)
+    mySpirograph.dot(5)
+    myPen.goto(mySpirograph.pos())
+
+
